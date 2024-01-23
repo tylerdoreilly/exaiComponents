@@ -1,0 +1,45 @@
+{
+  "name": "my-components",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "files": ["dist", "src/components/"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatijaNovosel/tri-state-checkbox.git"
+  },
+  "keywords": [
+    "vue3",
+    "vue",
+    "vuejs"
+  ],
+  "main": "./dist/exai-paragraph.umd.cjs",
+  "module": "./dist/exai-paragraph.js",
+  "exports": {
+    ".": {
+      "import": "./dist/exai-paragraph.js",
+      "require": "./dist/exai-paragraph.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "sass": "^1.70.0",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.7.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.11"
+  }
+}
