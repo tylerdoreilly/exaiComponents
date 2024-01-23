@@ -1,24 +1,24 @@
 {
-  "name": "my-components",
-  "version": "0.0.0",
+  "name": "@exai/components",
+  "version": "0.0.5",
   "private": false,
   "type": "module",
-  "files": ["dist", "src/components/"],
+  "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MatijaNovosel/tri-state-checkbox.git"
+    "url": "git+https://github.com/tylerdoreilly/exaiComponents.git"
   },
   "keywords": [
     "vue3",
     "vue",
     "vuejs"
   ],
-  "main": "./dist/exai-paragraph.umd.cjs",
-  "module": "./dist/exai-paragraph.js",
+  "main": "./dist/exai.umd.cjs",
+  "module": "./dist/exai.js",
   "exports": {
     ".": {
-      "import": "./dist/exai-paragraph.js",
-      "require": "./dist/exai-paragraph.umd.cjs"
+      "import": "./dist/exai.js",
+      "require": "./dist/exai.umd.cjs"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
