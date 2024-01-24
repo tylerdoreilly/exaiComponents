@@ -1,9 +1,11 @@
 {
-  "name": "@exai/components",
-  "version": "0.0.5",
+  "name": "exai-components",
+  "version": "0.0.6",
   "private": false,
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tylerdoreilly/exaiComponents.git"
@@ -13,12 +15,12 @@
     "vue",
     "vuejs"
   ],
-  "main": "./dist/exai.umd.cjs",
-  "module": "./dist/exai.js",
+  "main": "./dist/exai-components.umd.cjs",
+  "module": "./dist/exai-components.js",
   "exports": {
     ".": {
-      "import": "./dist/exai.js",
-      "require": "./dist/exai.umd.cjs"
+      "import": "./dist/exai-components.js",
+      "require": "./dist/exai-components.umd.cjs"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
@@ -34,7 +36,9 @@
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.8",
     "@vitejs/plugin-vue": "^4.5.2",
+    "@vueuse/core": "^10.7.2",
     "sass": "^1.70.0",
     "vite": "^5.0.10",
     "vite-plugin-dts": "^3.7.1"

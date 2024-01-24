@@ -11,6 +11,11 @@ export default {
       return {
         appTitle
       }
+    },
+    computed: {
+      hasHeaderActions() {
+        return !!this.$slots.headerActions;
+      }
     }
   }
 </script>
@@ -18,6 +23,9 @@ export default {
 <template>
     <header class="exai-header">
       <div class="exai-header__title">{{ appTitle }}</div>
+      <div class="exai-header__actions" v-if="hasHeaderActions">
+        <slot name="headerActions">Test</slot>
+      </div>
     </header>
 </template>
 
@@ -25,10 +33,18 @@ export default {
   .exai-header{
       display:flex;
       flex-direction:row;
+      justify-content: space-between;
       align-items: center;
       height:55px;
       width:100%;
-      background:darken(#181818, 5%);
+      background:#161618;
       padding:0 15px;
+
+      &__actions{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        gap:15px;
+      }
   }
 </style>

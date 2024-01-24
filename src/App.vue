@@ -1,10 +1,29 @@
 <script setup>
   import ExaiHeader from '@/components/ExaiHeader.vue'
+  import ExaiPopover from '@/components/ExaiPopover.vue'
+  import ExaiButton from '@/components/ExaiButton.vue'
 </script>
 
 <template>
- <ExaiHeader appTitle="Exai App" />
-   
+ <ExaiHeader appTitle="Exai Component Library">
+    <template #headerActions>
+      <div>Hello</div> 
+      <div>Tyler</div> 
+      <ExaiPopover text="Popover">
+        <p>Hey this is a test</p>
+      </ExaiPopover>
+      <exai-button text="btn test" ></exai-button>
+    </template>
+ </ExaiHeader>
+ <div class="container">
+  <div class="nav">
+    nav
+  </div>
+  
+  <div class="main">
+    content
+  </div>
+</div>  
 </template>
 
 <style scoped>

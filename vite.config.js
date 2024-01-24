@@ -11,7 +11,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
-      name: "exai"
+      name: "exai-components",
+      fileName: "exai-components"
     },
     rollupOptions: {
       external: ["vue"],
@@ -25,6 +26,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  css:{
+    preprocessorOptions:{
+      scss:{
+        additionalData:`
+        @use '@/styles/_variables' as *;
+        @use '@/styles/_mixins' as *;
+        `
+      }
     }
   }
 })
